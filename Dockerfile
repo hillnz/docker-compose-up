@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
         netcat \
     && rm -rf /var/lib/apt/lists/*
 
+COPY --from=jonoh/sops /usr/local/bin/sops /usr/local/bin/sops
+
 RUN git config --global pull.ff only
 COPY known_hosts "/root/.ssh/known_hosts"
 COPY monitor.sh /monitor.sh
