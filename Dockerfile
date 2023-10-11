@@ -1,4 +1,4 @@
-FROM debian:11.7-slim
+FROM debian:11.8-slim
 
 ENV COMPOSE_DIR=/compose
 ENV LISTEN_PORT=8080
